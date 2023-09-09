@@ -1,17 +1,11 @@
 package fiap.fintech.model;
 
-public class Receita {
+public class Receita extends Transacao{
 
-    private int id;
-    private String nome;
-    private int valor;
-    private int data;
 
-    public void validarReceita(){
-
+    public Receita(int id, String nome, String descricao, double valor, String data) {
+        super(id, nome, descricao, valor, data);
     }
 
-    public void calcularTotalReceita(){
 
-    }
 }

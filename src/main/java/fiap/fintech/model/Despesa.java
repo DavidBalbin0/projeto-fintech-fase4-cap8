@@ -1,15 +1,17 @@
 package fiap.fintech.model;
 
-public class Despesa {
-    private int id;
-    private String nome;
-    private int valor;
-    private int data;
+public class Despesa extends Transacao{
+
+    public Despesa(int id, String nome, String descricao, double valor, String data) {
+        super(id, nome, descricao, valor, data);
+    }
 
     public void validarDespesas(){
 
     }
-    public void calcularTotalDespesa(){
 
+    @Override
+    public double getValor() {
+        return -super.getValor();
     }
 }
